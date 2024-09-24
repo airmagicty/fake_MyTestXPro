@@ -14,8 +14,9 @@ type
   { TFormResultWallpapier }
 
   TFormResultWallpapier = class(TForm)
-    BitBtnReturnPlay: TBitBtn;
     BitBtnClose: TBitBtn;
+    BitBtnSkipFillWP: TBitBtn;
+    BitBtnReturnPlay: TBitBtn;
     CheckComboBox1: TCheckComboBox;
     EditBootom11: TEdit;
     EditBootom12: TEdit;
@@ -29,26 +30,35 @@ type
     EditBootom7: TEdit;
     EditBootom8: TEdit;
     EditBootom9: TEdit;
+    Image1: TImage;
     LabelTitleInfo: TLabel;
     MainBaseMenu: TMainMenu;
     Memo1: TMemo;
+    Memo10: TMemo;
     Memo2: TMemo;
     Memo3: TMemo;
     Memo4: TMemo;
     Memo5: TMemo;
     Memo6: TMemo;
+    Memo7: TMemo;
+    Memo8: TMemo;
+    Memo9: TMemo;
+    MemoWallpapierText: TMemo;
     MenuItemFile: TMenuItem;
     MenuItemTest: TMenuItem;
     MenuItemSettings: TMenuItem;
     MenuItemWho: TMenuItem;
     RadioButton1: TRadioButton;
-    RadioGroup1: TRadioGroup;
+    RadioButton2: TRadioButton;
+    RadioButton3: TRadioButton;
+    RadioButton4: TRadioButton;
+    RadioButton5: TRadioButton;
     TextStop: TEdit;
-    MemoWallpapierText: TMemo;
     TextTime: TEdit;
     TextTaskList: TEdit;
     TextPoint: TEdit;
     TextResultBall: TEdit;
+    ButtonNextWP: TToggleBox;
     procedure FormCreate(Sender: TObject);
     procedure MemoWallpapierTextChange(Sender: TObject);
     procedure StaticText1Click(Sender: TObject);

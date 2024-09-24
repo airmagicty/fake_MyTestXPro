@@ -1,11 +1,11 @@
 object FormResultWallpapier: TFormResultWallpapier
-  Left = 629
-  Height = 792
-  Top = 62
-  Width = 1102
+  Left = 360
+  Height = 827
+  Top = 83
+  Width = 1186
   Caption = 'FormResultWallpapier'
-  ClientHeight = 792
-  ClientWidth = 1102
+  ClientHeight = 827
+  ClientWidth = 1186
   Color = clWhite
   DesignTimePPI = 120
   Menu = MainBaseMenu
@@ -15,8 +15,26 @@ object FormResultWallpapier: TFormResultWallpapier
     Left = 8
     Height = 184
     Top = 24
-    Width = 1088
-    TabOrder = 0
+    Width = 1160
+    Color = clWhite
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clSilver
+    Font.Height = -18
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+      '                                                                                                                                                                                DEMO1'
+    )
+    ParentFont = False
+    TabOrder = 35
     OnChange = MemoWallpapierTextChange
   end
   object TextStop: TEdit
@@ -38,7 +56,7 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentFont = False
     ParentShowHint = False
     ReadOnly = True
-    TabOrder = 1
+    TabOrder = 0
     Text = 'Тест "" остановлен.'
   end
   object TextTime: TEdit
@@ -59,7 +77,7 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentFont = False
     ParentShowHint = False
     ReadOnly = True
-    TabOrder = 2
+    TabOrder = 1
     Text = 'Набрано 30 баллов из 30 возможных. Ваш результат: 100,0%.'
   end
   object TextTaskList: TEdit
@@ -79,7 +97,7 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentFont = False
     ParentShowHint = False
     ReadOnly = True
-    TabOrder = 3
+    TabOrder = 2
     Text = 'Время начала: 12:41:25. Время завершения: 12:41:43. Продолжительность: 00:05:17.'
   end
   object TextPoint: TEdit
@@ -100,7 +118,7 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentFont = False
     ParentShowHint = False
     ReadOnly = True
-    TabOrder = 4
+    TabOrder = 3
     Text = 'Всего заданий в тесте: 30. Задано задание: 8. Выполнено: 30. Правильно: 30. '
   end
   object TextResultBall: TEdit
@@ -122,21 +140,8 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentFont = False
     ParentShowHint = False
     ReadOnly = True
-    TabOrder = 5
+    TabOrder = 4
     Text = 'Оценка: 5.'
-  end
-  object BitBtnClose: TBitBtn
-    Left = 168
-    Height = 31
-    Top = 160
-    Width = 142
-    Caption = '   Закрыть'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -13
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 6
   end
   object BitBtnReturnPlay: TBitBtn
     Left = 16
@@ -145,7 +150,8 @@ object FormResultWallpapier: TFormResultWallpapier
     Width = 152
     Caption = 'Пройти ещё раз...'
     Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -13
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Glyph.Data = {
@@ -193,202 +199,423 @@ object FormResultWallpapier: TFormResultWallpapier
       0000000000000000000000000000000000000000000000000000
     }
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 5
   end
   object LabelTitleInfo: TLabel
     Left = 7
-    Height = 20
+    Height = 19
     Top = 3
-    Width = 96
+    Width = 95
     Caption = 'Информация:'
-  end
-  object RadioGroup1: TRadioGroup
-    Left = 47
-    Height = 131
-    Top = 246
-    Width = 911
-    AutoFill = True
-    Caption = 'RadioGroup1'
-    ChildSizing.LeftRightSpacing = 6
-    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-    ChildSizing.EnlargeVertical = crsHomogenousChildResize
-    ChildSizing.ShrinkHorizontal = crsScaleChilds
-    ChildSizing.ShrinkVertical = crsScaleChilds
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 1
-    ClientHeight = 106
-    ClientWidth = 907
-    ParentBackground = False
-    TabOrder = 8
-    object RadioButton1: TRadioButton
-      Left = 6
-      Height = 51
-      Top = 0
-      Width = 895
-      Caption = 'RadioButton1'
-      TabOrder = 0
-    end
-    object Memo1: TMemo
-      Left = 6
-      Height = 55
-      Top = 51
-      Width = 895
-      Lines.Strings = (
-        'Memo1'
-      )
-      TabOrder = 1
-    end
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
   end
   object EditBootom3: TEdit
     Left = 175
     Height = 28
-    Top = 764
+    Top = 804
     Width = 64
-    TabOrder = 10
+    TabOrder = 6
   end
   object EditBootom4: TEdit
     Left = 238
     Height = 28
-    Top = 764
+    Top = 804
     Width = 72
-    TabOrder = 11
+    TabOrder = 7
   end
   object EditBootom5: TEdit
     Left = 309
     Height = 28
-    Top = 764
+    Top = 804
     Width = 72
-    TabOrder = 12
+    TabOrder = 9
   end
   object EditBootom6: TEdit
     Left = 376
     Height = 28
-    Top = 764
+    Top = 804
     Width = 72
-    TabOrder = 13
-  end
-  object EditBootom7: TEdit
-    Left = 447
-    Height = 28
-    Top = 764
-    Width = 72
-    TabOrder = 14
+    TabOrder = 10
   end
   object EditBootom8: TEdit
     Left = 518
     Height = 28
-    Top = 764
+    Top = 804
     Width = 32
-    TabOrder = 15
+    TabOrder = 11
   end
   object EditBootom9: TEdit
     Left = 549
     Height = 28
-    Top = 764
+    Top = 804
     Width = 32
-    TabOrder = 16
+    TabOrder = 12
   end
   object EditBootom11: TEdit
     Left = 610
     Height = 28
-    Top = 764
+    Top = 804
     Width = 32
-    TabOrder = 17
+    TabOrder = 13
   end
   object EditBootom12: TEdit
     Left = 640
     Height = 28
-    Top = 764
+    Top = 804
     Width = 32
-    TabOrder = 18
+    TabOrder = 14
   end
   object EditBootom13: TEdit
     Left = 671
     Height = 28
-    Top = 764
+    Top = 804
     Width = 65
-    TabOrder = 19
+    TabOrder = 15
   end
   object EditBootom16: TEdit
-    Left = 804
+    Left = 808
     Height = 28
-    Top = 764
-    Width = 198
-    TabOrder = 20
+    Top = 804
+    Width = 272
+    TabOrder = 16
   end
   object EditBootom17: TEdit
-    Left = 1000
+    Left = 1072
     Height = 28
-    Top = 764
-    Width = 102
-    TabOrder = 21
+    Top = 804
+    Width = 114
+    TabOrder = 17
   end
   object CheckComboBox1: TCheckComboBox
-    Left = 2
+    Left = 7
     Height = 26
-    Top = 734
-    Width = 1100
+    Top = 772
+    Width = 1172
     Color = clWhite
+    Enabled = False
     ItemHeight = 20
-    TabOrder = 9
+    TabOrder = 8
   end
   object Memo2: TMemo
     Left = 0
-    Height = 28
-    Top = 764
+    Height = 36
+    Top = 804
     Width = 120
     Alignment = taCenter
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
     Lines.Strings = (
       'Тест выбран'
     )
-    TabOrder = 22
+    ParentFont = False
+    TabOrder = 18
   end
   object Memo3: TMemo
     Left = 119
-    Height = 28
-    Top = 764
+    Height = 36
+    Top = 804
     Width = 57
     Alignment = taCenter
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
     Lines.Strings = (
       '30'
     )
-    TabOrder = 23
+    ParentFont = False
+    TabOrder = 19
   end
   object Memo4: TMemo
     Left = 578
-    Height = 28
-    Top = 764
+    Height = 36
+    Top = 804
     Width = 34
     Alignment = taCenter
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
     Lines.Strings = (
       'C'
     )
-    TabOrder = 24
+    ParentFont = False
+    TabOrder = 20
   end
   object Memo5: TMemo
     Left = 734
-    Height = 28
-    Top = 764
+    Height = 36
+    Top = 804
     Width = 34
     Alignment = taCenter
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
     Lines.Strings = (
       '___'
     )
-    TabOrder = 25
+    ParentFont = False
+    TabOrder = 21
   end
   object Memo6: TMemo
     Left = 767
-    Height = 28
-    Top = 764
-    Width = 41
+    Height = 36
+    Top = 804
+    Width = 49
     Alignment = taCenter
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
     Lines.Strings = (
       'РУС'
     )
+    ParentFont = False
+    TabOrder = 22
+  end
+  object RadioButton1: TRadioButton
+    Left = 32
+    Height = 24
+    Top = 289
+    Width = 29
+    Caption = '1'
+    Enabled = False
+    TabOrder = 23
+  end
+  object Memo1: TMemo
+    Left = 80
+    Height = 88
+    Top = 264
+    Width = 1088
+    Enabled = False
+    TabOrder = 24
+  end
+  object RadioButton2: TRadioButton
+    Left = 32
+    Height = 24
+    Top = 376
+    Width = 29
+    Caption = '2'
+    Enabled = False
+    TabOrder = 25
+  end
+  object Memo7: TMemo
+    Left = 80
+    Height = 88
+    Top = 352
+    Width = 1088
+    Enabled = False
     TabOrder = 26
   end
+  object RadioButton3: TRadioButton
+    Left = 32
+    Height = 24
+    Top = 464
+    Width = 29
+    Caption = '3'
+    Enabled = False
+    TabOrder = 27
+  end
+  object Memo8: TMemo
+    Left = 80
+    Height = 88
+    Top = 440
+    Width = 1088
+    Enabled = False
+    TabOrder = 28
+  end
+  object RadioButton4: TRadioButton
+    Left = 32
+    Height = 24
+    Top = 552
+    Width = 29
+    Caption = '4'
+    Enabled = False
+    TabOrder = 29
+  end
+  object Memo9: TMemo
+    Left = 80
+    Height = 88
+    Top = 528
+    Width = 1088
+    Enabled = False
+    TabOrder = 30
+  end
+  object RadioButton5: TRadioButton
+    Left = 32
+    Height = 24
+    Top = 640
+    Width = 29
+    Caption = '5'
+    Enabled = False
+    TabOrder = 31
+  end
+  object Memo10: TMemo
+    Left = 80
+    Height = 88
+    Top = 616
+    Width = 1088
+    Enabled = False
+    TabOrder = 32
+  end
+  object ButtonNextWP: TToggleBox
+    Left = 7
+    Height = 40
+    Top = 720
+    Width = 107
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = '     Пропустить'
+    Enabled = False
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 33
+  end
+  object BitBtnSkipFillWP: TBitBtn
+    Left = 114
+    Height = 40
+    Top = 720
+    Width = 1065
+    Caption = 'Дальше (проверить)...'
+    Enabled = False
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Glyph.Data = {
+      76050000424D7605000000000000360000002800000015000000100000000100
+      2000000000004005000064000000640000000000000000000000000000000000
+      000000000000000000000000000000000000D0DAD0010000000000000000D1DA
+      D122000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000248E26FF248E26FF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000329434FF248E
+      26FF248E26FF339434FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000419B42FF248E26FF248E26FF248E26FF248E26FF429B
+      44FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000409A42FF248E
+      26FF248E26FF248E26FF248E26FF248E26FF248E26FF419B43FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000D0DAD00100000000309331FF248E26FF248E26FF248E26FF248E26FF248E
+      26FF248E26FF248E26FF248E26FF329434FF00000000D1DAD122000000000000
+      0000000000000000000000000000000000000000000000000000248E26FF248E
+      26FF248E26FF248E26FF29902BFF349536FF349536FF29902BFF248E26FF248E
+      26FF248E26FF248E26FF00000000000000000000000000000000000000000000
+      00000000000000000000339435FF248E26FF248E26FF248E26FF248E26FF58A5
+      59FF000000000000000055A357FF248E26FF248E26FF248E26FF248E26FF3395
+      35FF00000000000000000000000000000000000000000000000000000000248E
+      26FF248E26FF248E26FF248E26FF66AB67FF0000000000000000000000000000
+      000064AA65FF248E26FF248E26FF248E26FF248E26FF429B44FF000000000000
+      00000000000000000000000000000000000063AA64FF248E26FF248E26FF65AB
+      66FF00000000000000000000000000000000000000000000000064AA65FF248E
+      26FF248E26FF248E26FF248E26FF429B43FF0000000000000000000000000000
+      000000000000000000005AA65BFF5AA65BFF0000000000000000000000000000
+      00000000000000000000000000000000000054A356FF29902BFF248E26FF248E
+      26FF248E26FF329434FF00000000D1DAD1220000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000449C45FF29902BFF248E26FF248E26FF248E26FF248E
+      26FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000055A457FF248E26FF248E26FF248E26FF248E26FF339535FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000064AA65FF248E
+      26FF248E26FF248E26FF248E26FF000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000063AA64FF248E26FF248E26FF63AA
+      65FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000059A55BFF59A55BFF0000000000000000
+    }
+    ParentFont = False
+    TabOrder = 34
+  end
+  object BitBtnClose: TBitBtn
+    Left = 168
+    Height = 32
+    Top = 159
+    Width = 142
+    Caption = 'Закрыть'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Glyph.Data = {
+      DA050000424DDA05000000000000360000002800000013000000130000000100
+      200000000000A405000064000000640000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000004F71C4FF7991CCFF0000
+      00000000000000000000000000000000000000000000CBD0DDEE2651BBFFA2B0
+      D4FF000000000000000000000000000000000000000000000000D0D4DD054B6D
+      C2FF1558D5FF205BCFFF6C87C9FF00000000000000000000000000000000AFBA
+      D7FF345FC2FF0B56DBFF2A5CC9FF8DA0D0FF0000000000000000000000000000
+      0000000000005A7DCBFF1255D3FF034FD7FF0550D7FF245FD1FF718BCBFF0000
+      000000000000A2B1D5FF4872CCFF0850D5FF024FD8FF064FD6FF346DD8FF86A4
+      DDFF0000000000000000000000006589D2FF0A4DCEFF0352DCFF024DD5FF024F
+      D7FF0551D8FF1954CCFF8099D1FF8DA1D2FF4C76CFFF084DD1FF0252DDFF024C
+      D3FF0250DAFF0454DEFF2E6CDBFF95AAD6FF000000008DA4D5FF2962CFFF0555
+      DFFF024CD3FF044FD4FF034DD3FF024ED6FF0455E0FF0C4AC7FF0D48C5FF084F
+      D4FF0253DDFF024BD1FF044FD5FF034CD2FF0451D9FF155BD9FF4B73CBFF0000
+      000000000000A1B3D8FF0D49C4FF0955D8FF0755D9FF0653D7FF044FD5FF004A
+      D1FF0358E5FF035AE8FF0151DBFF024BD1FF0652D7FF0754D8FF0855D9FF0B4F
+      CDFF4E76CBFF00000000000000000000000000000000A6B7D9FF1E59CCFF0B55
+      D6FF0957DAFF0856D9FF0654D8FF0756DCFF0757DDFF0755DAFF0754D8FF0856
+      DAFF0958DBFF0C51CEFF6288D2FF000000000000000000000000000000000000
+      00000000000095ABD7FF336BD2FF0C56D7FF0B5ADDFF0A59DBFF0958DBFF0958
+      DBFF0A58DBFF0A59DCFF0B5ADCFF0C53D2FF668CD4FF00000000000000000000
+      000000000000000000000000000000000000000000004D7AD1FF0D56D5FF0D5E
+      DFFF0C5DDFFF0B5CDEFF0B5CDEFF0C5CDEFF0D5EDFFF0E5DDEFF0D50CDFFA1B5
+      DAFF000000000000000000000000000000000000000000000000000000000000
+      00004075D5FF0E5ADAFF0F61E2FF0F61E2FF0E60E1FF0E60E1FF0F61E2FF0F62
+      E2FF0F60E1FF0E55D3FF84A2DAFF000000000000000000000000000000000000
+      000000000000000000002260D2FF0F5FDEFF1164E4FF1164E5FF1164E5FF1265
+      E6FF1266E6FF1165E5FF1164E4FF1164E4FF1164E5FF0E57D6FF7799D8FF0000
+      000000000000000000000000000000000000336FD8FF1565E1FF1266E5FF1367
+      E6FF1367E7FF1A6DE9FF4D96F2FF539BF4FF3382EEFF1367E7FF1366E6FF1367
+      E6FF1264E4FF246ADCFF6A92DAFF0000000000000000000000005085DDFF2672
+      E5FF166AE8FF146AE9FF146AE9FF2375ECFF428DF0FF317BE7FF2F79E5FF3984
+      EBFF3684EFFF1569E9FF146AE9FF1469E9FF2170E7FF3D7EE2FF6F95DAFF0000
+      0000000000005085DDFF2876E8FF2D7DEEFF1D71ECFF2578EDFF3885EFFF438A
+      EBFF5D8EDEFF608FDCFF508CE4FF3D88EDFF3281EFFF196FEBFF2779EDFF2E7C
+      EBFF3D7FE4FF6E95DAFF0000000000000000000000003676DDFF438CEEFF2F80
+      EFFF3C8AF0FF498EECFF467FDDFF00000000000000008AABDFFF3D80E3FF4E96
+      F2FF2B7DEEFF3B89F0FF3D81E6FF6994DDFF0000000000000000000000000000
+      0000000000002068DDFF4991EFFF3782EAFF4B83DFFF00000000000000000000
+      000000000000A0B8E0FF1363E1FF5BA1F4FF2573E5FF759EDFFF000000000000
+      000000000000000000000000000000000000000000004A86E2FF6998E2FF0000
+      00000000000000000000000000000000000000000000A6BDE1FF2C74E3FF87AA
+      E1FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000
+    }
+    ParentFont = False
+    TabOrder = 36
+  end
+  object EditBootom7: TEdit
+    Left = 447
+    Height = 28
+    Top = 804
+    Width = 72
+    TabOrder = 37
+  end
   object MainBaseMenu: TMainMenu
-    Left = 1069
+    Left = 1136
     Top = 65520
     object MenuItemFile: TMenuItem
       Caption = 'Файл'
