@@ -30,6 +30,7 @@ type
     EditBootom7: TEdit;
     EditBootom8: TEdit;
     EditBootom9: TEdit;
+    Image1: TImage;
     LabelTitleInfo: TLabel;
     MainBaseMenu: TMainMenu;
     Memo1: TMemo;
@@ -47,6 +48,7 @@ type
     MenuItemTest: TMenuItem;
     MenuItemSettings: TMenuItem;
     MenuItemWho: TMenuItem;
+    Panel1: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;

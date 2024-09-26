@@ -1,4 +1,4 @@
-unit Unit1;
+unit UnitTestWP;
 
 {$mode objfpc}{$H+}
 
@@ -48,6 +48,7 @@ type
     MenuItemTest: TMenuItem;
     MenuItemSettings: TMenuItem;
     MenuItemWho: TMenuItem;
+    Panel1: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;

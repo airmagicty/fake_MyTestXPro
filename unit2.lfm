@@ -1,0 +1,23 @@
+object FormResult: TFormResult
+  Left = 613
+  Height = 393
+  Top = 373
+  Width = 522
+  Caption = 'FormResult'
+  ClientHeight = 393
+  ClientWidth = 522
+  DesignTimePPI = 120
+  LCLVersion = '3.4.0.0'
+  object Label1: TLabel
+    Left = 88
+    Height = 28
+    Top = 40
+    Width = 206
+    Caption = 'Всего заданий в тесте: '
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -20
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+end

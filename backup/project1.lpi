@@ -46,7 +46,29 @@
         <ComponentName Value="FormResultWallpapier"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
+        <UnitName Value="UnitTestWP"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormResult"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitTestResult"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\unit3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormStart"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormTestStart"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitTestStart"/>
       </Unit>
     </Units>
   </ProjectOptions>
