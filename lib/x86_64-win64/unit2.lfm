@@ -3,9 +3,11 @@ object FormResult: TFormResult
   Height = 368
   Top = 368
   Width = 553
+  BorderIcons = []
   Caption = 'FormResult'
   ClientHeight = 368
   ClientWidth = 553
+  Color = clWhite
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
   object Label2: TLabel
@@ -76,7 +78,7 @@ object FormResult: TFormResult
     Font.Quality = fqDraft
     ParentFont = False
   end
-  object Label6: TLabel
+  object LabelBallAll: TLabel
     Left = 288
     Height = 28
     Top = 40
@@ -88,7 +90,7 @@ object FormResult: TFormResult
     Font.Quality = fqDraft
     ParentFont = False
   end
-  object Label7: TLabel
+  object LabelBallMy: TLabel
     Left = 288
     Height = 28
     Top = 72
@@ -100,7 +102,7 @@ object FormResult: TFormResult
     Font.Quality = fqDraft
     ParentFont = False
   end
-  object Label8: TLabel
+  object LabelBallSuccess: TLabel
     Left = 288
     Height = 28
     Top = 104
@@ -112,7 +114,7 @@ object FormResult: TFormResult
     Font.Quality = fqDraft
     ParentFont = False
   end
-  object Label9: TLabel
+  object LabelEfficiency: TLabel
     Left = 288
     Height = 28
     Top = 136
@@ -124,7 +126,7 @@ object FormResult: TFormResult
     Font.Quality = fqDraft
     ParentFont = False
   end
-  object Label12: TLabel
+  object LabelResultText: TLabel
     Left = 48
     Height = 50
     Top = 192

@@ -31,7 +31,6 @@ type
     Shape1: TShape;
     StaticTextBall: TStaticText;
     procedure BitBtnOkClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
   private
 
   public
@@ -50,11 +49,6 @@ implementation
 procedure TFormResult.BitBtnOkClick(Sender: TObject);
 begin
   FormResult.Close;
-end;
-
-procedure TFormResult.FormClose(Sender: TObject; var CloseAction: TCloseAction);
-begin
-  Application.Terminate;
 end;
 
 end.

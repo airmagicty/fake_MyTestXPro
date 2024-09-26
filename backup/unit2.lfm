@@ -3,11 +3,12 @@ object FormResult: TFormResult
   Height = 368
   Top = 368
   Width = 553
+  BorderIcons = []
   Caption = 'FormResult'
   ClientHeight = 368
   ClientWidth = 553
+  Color = clWhite
   DesignTimePPI = 120
-  OnClose = FormClose
   LCLVersion = '3.4.0.0'
   object Label2: TLabel
     Left = 59
