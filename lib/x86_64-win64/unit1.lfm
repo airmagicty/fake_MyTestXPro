@@ -14,7 +14,7 @@ object FormResultWallpapier: TFormResultWallpapier
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   Menu = MainBaseMenu
-  OnCreate = FormCreate
+  OnClose = FormClose
   LCLVersion = '3.4.0.0'
   object MemoWallpapierText: TMemo
     Left = 8
@@ -40,7 +40,6 @@ object FormResultWallpapier: TFormResultWallpapier
     )
     ParentFont = False
     TabOrder = 35
-    OnChange = MemoWallpapierTextChange
   end
   object TextStop: TEdit
     Left = 16
@@ -610,6 +609,7 @@ object FormResultWallpapier: TFormResultWallpapier
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000
     }
+    OnClick = BitBtnCloseClick
     ParentFont = False
     TabOrder = 36
   end

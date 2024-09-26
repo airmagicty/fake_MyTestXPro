@@ -60,9 +60,8 @@ type
     TextPoint: TEdit;
     TextResultBall: TEdit;
     ButtonNextWP: TToggleBox;
-    procedure FormCreate(Sender: TObject);
-    procedure MemoWallpapierTextChange(Sender: TObject);
-    procedure StaticText1Click(Sender: TObject);
+    procedure BitBtnCloseClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
   private
 
   public
@@ -78,18 +77,15 @@ implementation
 
 { TFormResultWallpapier }
 
-procedure TFormResultWallpapier.StaticText1Click(Sender: TObject);
+procedure TFormResultWallpapier.FormClose(Sender: TObject;
+  var CloseAction: TCloseAction);
 begin
-  end;
-
-procedure TFormResultWallpapier.MemoWallpapierTextChange(Sender: TObject);
-begin
-
+  Application.Terminate;
 end;
 
-procedure TFormResultWallpapier.FormCreate(Sender: TObject);
+procedure TFormResultWallpapier.BitBtnCloseClick(Sender: TObject);
 begin
-
+  Application.Terminate;
 end;
 
 end.

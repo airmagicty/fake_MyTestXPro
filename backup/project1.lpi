@@ -46,7 +46,7 @@
         <ComponentName Value="FormResultWallpapier"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="UnitTestWP"/>
+        <UnitName Value="Unit1"/>
       </Unit>
       <Unit>
         <Filename Value="unit2.pas"/>
@@ -54,7 +54,7 @@
         <ComponentName Value="FormResult"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="UnitTestResult"/>
+        <UnitName Value="Unit2"/>
       </Unit>
       <Unit>
         <Filename Value="src\unit3.pas"/>

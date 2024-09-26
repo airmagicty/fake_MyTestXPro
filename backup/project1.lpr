@@ -21,7 +21,7 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormTestStart, FormTestStart);
   Application.CreateForm(TFormResultWallpapier, FormResultWallpapier);
-  Application.CreateForm(TFormFormResult, FormResult);
+  Application.CreateForm(TFormResult, FormResult);
   Application.Run;
 end.
 

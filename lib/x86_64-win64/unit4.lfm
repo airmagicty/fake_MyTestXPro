@@ -1,17 +1,17 @@
 object FormTestStart: TFormTestStart
-  Left = 526
-  Height = 240
-  Top = 279
-  Width = 320
+  Left = 621
+  Height = 82
+  Top = 650
+  Width = 321
   Caption = 'FormTestStart'
-  ClientHeight = 240
-  ClientWidth = 320
+  ClientHeight = 82
+  ClientWidth = 321
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
   object ButtonStart: TButton
-    Left = 104
+    Left = 112
     Height = 31
-    Top = 96
+    Top = 24
     Width = 94
     Caption = 'ButtonStart'
     TabOrder = 0
