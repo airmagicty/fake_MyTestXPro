@@ -155,7 +155,7 @@ begin
   FormResultWallpapier.TextTaskList.Text := 'Набрано '+IntToStr(edit_success_ball)+' баллов из '+IntToStr(edit_all_ball)+' возможных. Ваш результат: '+FloatToStr(edit_progress)+',0%.';
   FormResultWallpapier.TextResultBall.Text := 'Оценка: '+IntToStr(edit_success_ball_ball)+'.';
 
-  FormResultWallpapier.MemoBottomAllBalls.Lines := IntToStr(edit_all_ball);
+  FormResultWallpapier.MemoBottomAllBalls.Text := IntToStr(edit_all_ball);
 
   FormResult.LabelBallAll.Caption := IntToStr(edit_all_ball);
   FormResult.LabelBallMy.Caption := IntToStr(edit_my_ball);
@@ -189,7 +189,8 @@ begin
               '2. В строку [Имя Фам Класс] введите Фамилию Имя Класс, которые так же отобразятся в результате.'+#13+
               '3. В строку [заданий в тесте] введите количество вопросов в тесте.'+#13+
               '4. В строку [заданий задано] введите количество вопросов, которое вы из них прошли.'+#13+
-              '5. В строку [из них правильно] введите количество правильных вопросов.'+#13+
+              '5. В строку [верно; балл=] введите количество правильных вопросов.'+#13+
+              '5.1 В строку [балл=] введите желаемую оценку.'+#13+
               '6. В строку [Проходил (мин)] введите время, затраченное на прохождение теста.'+#13+
               '7. Нажмите [Создать] - это окно скроется, закроется открытый процесс (если поле [Процесс.exe] не пустое) и откроется сгенерированное окно с заданными параметрами.'+#13+
               'Примечание1: при сворачивании сгенерированного окна с результатом - оно скроется.'+#13+
