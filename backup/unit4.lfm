@@ -1,10 +1,10 @@
 object FormTestStart: TFormTestStart
-  Left = 512
-  Height = 105
-  Top = 563
+  Left = 430
+  Height = 104
+  Top = 727
   Width = 240
   Caption = 'FS_Test'
-  ClientHeight = 105
+  ClientHeight = 104
   ClientWidth = 240
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
@@ -38,6 +38,7 @@ object FormTestStart: TFormTestStart
     Height = 28
     Top = 0
     Width = 120
+    NumbersOnly = True
     TabOrder = 3
     TextHint = 'заданий в тесте'
     OnEditingDone = EditAllBallEditingDone
@@ -47,6 +48,7 @@ object FormTestStart: TFormTestStart
     Height = 28
     Top = 24
     Width = 120
+    NumbersOnly = True
     TabOrder = 4
     TextHint = 'заданий задано'
   end
@@ -54,9 +56,10 @@ object FormTestStart: TFormTestStart
     Left = 120
     Height = 28
     Top = 48
-    Width = 120
+    Width = 96
+    NumbersOnly = True
     TabOrder = 5
-    TextHint = 'из них правильно'
+    TextHint = 'верно; балл='
   end
   object BitBtnInfo: TBitBtn
     Left = 208
@@ -103,10 +106,11 @@ object FormTestStart: TFormTestStart
     TabOrder = 6
   end
   object EditTestTime: TEdit
-    Left = 1
+    Left = 0
     Height = 28
     Top = 48
-    Width = 119
+    Width = 120
+    NumbersOnly = True
     TabOrder = 7
     TextHint = 'Проходил (мин)'
   end
@@ -116,5 +120,15 @@ object FormTestStart: TFormTestStart
     Top = 2
     Width = 21
     TabOrder = 8
+  end
+  object EditSuccessBallBall: TEdit
+    Left = 216
+    Height = 28
+    Top = 48
+    Width = 24
+    NumbersOnly = True
+    TabOrder = 9
+    Text = '5'
+    TextHint = 'верно'
   end
 end

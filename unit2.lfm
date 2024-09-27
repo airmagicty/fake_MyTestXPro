@@ -1,14 +1,16 @@
 object FormResult: TFormResult
-  Left = 692
+  Left = 656
   Height = 368
-  Top = 368
+  Top = 386
   Width = 553
-  BorderIcons = []
+  BorderIcons = [biSystemMenu]
   Caption = 'FormResult'
   ClientHeight = 368
   ClientWidth = 553
   Color = clWhite
   DesignTimePPI = 120
+  OnActivate = FormActivate
+  OnClose = FormClose
   LCLVersion = '3.4.0.0'
   object Label2: TLabel
     Left = 59
@@ -359,38 +361,13 @@ object FormResult: TFormResult
       793322C3221D7EB9DDFF01CBB9FF431B0676250000000049454E44AE426082
     }
   end
-  object Label10: TLabel
-    Left = 456
-    Height = 17
-    Top = 16
-    Width = 56
-    Caption = 'Вопросы:'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Color = clGray
-    Font.Height = -13
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-  end
-  object Label11: TLabel
-    Left = 456
-    Height = 17
-    Top = 136
-    Width = 40
-    Caption = 'Баллы:'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Color = clGray
-    Font.Height = -13
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-  end
   object BitBtnOk: TBitBtn
     Left = 8
     Height = 30
     Top = 328
     Width = 536
-    Caption = 'ОК'
+    Caption = 'ОК (5)'
+    Enabled = False
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -13
     Font.Pitch = fpVariable
@@ -466,5 +443,41 @@ object FormResult: TFormResult
     Top = 264
     Width = 520
     Enabled = False
+  end
+  object StaticText1: TStaticText
+    Left = 432
+    Height = 21
+    Top = 16
+    Width = 97
+    Alignment = taCenter
+    Caption = 'Вопросы:'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+  end
+  object StaticText2: TStaticText
+    Left = 432
+    Height = 21
+    Top = 136
+    Width = 97
+    Alignment = taCenter
+    Caption = 'Баллы:'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 3
+  end
+  object ResultTimer: TTimer
+    Enabled = False
+    OnTimer = ResultTimerTimer
+    Left = 360
+    Top = 32
   end
 end

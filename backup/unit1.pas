@@ -17,7 +17,8 @@ type
     BitBtnClose: TBitBtn;
     BitBtnSkipFillWP: TBitBtn;
     BitBtnReturnPlay: TBitBtn;
-    CheckComboBox1: TCheckComboBox;
+    BitBtnCloseNew: TButton;
+    CheckComboBoxBottom: TCheckComboBox;
     EditBootom11: TEdit;
     EditBootom12: TEdit;
     EditBootom13: TEdit;
@@ -36,7 +37,7 @@ type
     Memo1: TMemo;
     Memo10: TMemo;
     Memo2: TMemo;
-    Memo3: TMemo;
+    MemoBottomAllBalls: TMemo;
     Memo4: TMemo;
     Memo5: TMemo;
     Memo6: TMemo;
@@ -55,12 +56,14 @@ type
     RadioButton4: TRadioButton;
     RadioButton5: TRadioButton;
     TextStop: TEdit;
-    TextTime: TEdit;
     TextTaskList: TEdit;
+    TextTime: TEdit;
     TextPoint: TEdit;
     TextResultBall: TEdit;
     ButtonNextWP: TToggleBox;
+    procedure BitBtnCloseClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure MemoBottomAllBallsChange(Sender: TObject);
   private
 
   public
@@ -78,6 +81,16 @@ implementation
 
 procedure TFormResultWallpapier.FormClose(Sender: TObject;
   var CloseAction: TCloseAction);
+begin
+  Application.Terminate;
+end;
+
+procedure TFormResultWallpapier.MemoBottomAllBallsChange(Sender: TObject);
+begin
+
+end;
+
+procedure TFormResultWallpapier.BitBtnCloseClick(Sender: TObject);
 begin
   Application.Terminate;
 end;

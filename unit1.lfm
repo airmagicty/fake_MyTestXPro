@@ -39,6 +39,7 @@ object FormResultWallpapier: TFormResultWallpapier
       'DEMO           DEMO           DEMO           DEMO           DEMO           DEMO           DEMO           DEMO           DEMO           DEMO           DEMO'
     )
     ParentFont = False
+    ReadOnly = True
     TabOrder = 35
   end
   object TextStop: TEdit
@@ -65,7 +66,7 @@ object FormResultWallpapier: TFormResultWallpapier
     TabOrder = 0
     Text = 'Тест "" остановлен.'
   end
-  object TextTime: TEdit
+  object TextTaskList: TEdit
     Left = 16
     Height = 20
     Top = 104
@@ -86,7 +87,7 @@ object FormResultWallpapier: TFormResultWallpapier
     TabOrder = 1
     Text = 'Набрано 30 баллов из 30 возможных. Ваш результат: 100,0%.'
   end
-  object TextTaskList: TEdit
+  object TextTime: TEdit
     Left = 16
     Height = 20
     Top = 56
@@ -125,7 +126,7 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentShowHint = False
     ReadOnly = True
     TabOrder = 3
-    Text = 'Всего заданий в тесте: 30. Задано задание: 8. Выполнено: 30. Правильно: 30. '
+    Text = 'Всего заданий в тесте: 30. Задано заданий: 8. Выполнено: 30. Правильно: 30. '
   end
   object TextResultBall: TEdit
     Left = 16
@@ -297,7 +298,7 @@ object FormResultWallpapier: TFormResultWallpapier
     Width = 114
     TabOrder = 17
   end
-  object CheckComboBox1: TCheckComboBox
+  object CheckComboBoxBottom: TCheckComboBox
     Left = 7
     Height = 26
     Top = 772
@@ -323,7 +324,7 @@ object FormResultWallpapier: TFormResultWallpapier
     ParentFont = False
     TabOrder = 18
   end
-  object Memo3: TMemo
+  object MemoBottomAllBalls: TMemo
     Left = 119
     Height = 31
     Top = 804
@@ -333,11 +334,9 @@ object FormResultWallpapier: TFormResultWallpapier
     Font.Name = 'Times New Roman'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    Lines.Strings = (
-      '30'
-    )
     ParentFont = False
     TabOrder = 19
+    OnChange = MemoBottomAllBallsChange
   end
   object Memo4: TMemo
     Left = 578
@@ -1032,6 +1031,21 @@ object FormResultWallpapier: TFormResultWallpapier
         0049454E44AE426082
       }
     end
+  end
+  object BitBtnCloseNew: TButton
+    Left = 168
+    Height = 32
+    Top = 160
+    Width = 142
+    Caption = '      Закрыть'
+    Enabled = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 39
   end
   object MainBaseMenu: TMainMenu
     Left = 1136

@@ -1,10 +1,10 @@
 object FormTestStart: TFormTestStart
-  Left = 512
-  Height = 105
-  Top = 563
+  Left = 430
+  Height = 104
+  Top = 727
   Width = 240
   Caption = 'FS_Test'
-  ClientHeight = 105
+  ClientHeight = 104
   ClientWidth = 240
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
@@ -106,10 +106,11 @@ object FormTestStart: TFormTestStart
     TabOrder = 6
   end
   object EditTestTime: TEdit
-    Left = 1
+    Left = 0
     Height = 28
     Top = 48
-    Width = 119
+    Width = 120
+    NumbersOnly = True
     TabOrder = 7
     TextHint = 'Проходил (мин)'
   end

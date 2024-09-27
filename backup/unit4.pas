@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Process, LazUTF8, Unit2, Unit1;
+  Buttons, Process, LazUTF8, Unit2, Unit1, DateUtils;
 
 type
 
@@ -16,6 +16,7 @@ type
     BitBtnInfo: TBitBtn;
     ButtonStart: TButton;
     CheckBoxTestName: TCheckBox;
+    EditSuccessBallBall: TEdit;
     EditTestTime: TEdit;
     EditTestName: TEdit;
     EditNameFamilyClass: TEdit;
@@ -43,23 +44,126 @@ implementation
 //TaskKill
 procedure TaskKill();
 var AProcess: TProcess;
-  begin
-    AProcess := TProcess.Create(nil);
-    AProcess.CommandLine := 'cmd  /x/c taskkill /f /im "MyTestStudent.exe"';
+begin
+AProcess := TProcess.Create(nil);
+try
+    AProcess.Executable := 'cmd';
+    AProcess.Parameters.Add('/c');
+    AProcess.Parameters.Add('taskkill');
+    AProcess.Parameters.Add('/f');
+    AProcess.Parameters.Add('/im');
+    AProcess.Parameters.Add('MyTestStudent.exe');
     AProcess.Options := AProcess.Options + [poWaitOnExit];
     AProcess.Execute;
+finally
     AProcess.Free;
+end;
 end;
 
 procedure TFormTestStart.ButtonStartClick(Sender: TObject);
+var
+  current_time, new_time, difference_time: TDateTime;
+  edit_all_ball, edit_my_ball, edit_success_ball, edit_success_ball_ball: Integer;
+  edit_progress: Real;
 begin
   // убиваем процесс теста
   //TaskKill();
 
-   //открываем новые окна и скрываем старое
+   // открываем новые окна и скрываем старое
   FormResultWallpapier.Show;
   FormResult.Show;
   FormTestStart.Hide;
+
+  // передаем название теста в заголовки и в
+  if (length(FormTestStart.EditTestName.Text) <> 0) then
+  begin
+    FormResultWallpapier.Caption := FormTestStart.EditTestName.Text+'.mtx - MyTestStudent [MyTestXPro] НЕЗАРЕГИСТРИРОВАННАЯ ВЕРСИЯ';
+    if (FormTestStart.CheckBoxTestName.Checked = true) then
+    begin
+      FormResultWallpapier.TextStop.Text := 'Тест "'+FormTestStart.EditTestName.Text+'" остановлен.';
+    end;
+  end
+  else
+  begin
+    FormResultWallpapier.Caption := 'Тестирование.mtx - MyTestStudent [MyTestXPro] НЕЗАРЕГИСТРИРОВАННАЯ ВЕРСИЯ';
+  end;
+
+
+  // фио и класс
+  if (length(FormTestStart.EditTestName.Text) <> 0) then
+  begin
+    FormResult.Caption := 'Результаты тестирования ('+FormTestStart.EditNameFamilyClass.Text+')';
+  end
+  else
+  begin
+    FormResult.Caption := 'Результаты тестирования (Имя Фамилия 4)';
+  end;
+
+  // время прохождения
+  current_time := Now;
+  if ((length(FormTestStart.EditTestTime.Text) <> 0) and (StrToInt(FormTestStart.EditTestTime.Text) > 0)) then
+  begin
+    new_time := IncMinute(current_time, StrToInt(FormTestStart.EditTestTime.Text));
+  end
+  else
+  begin
+    new_time := IncMinute(current_time, 8);
+  end;
+  difference_time := new_time - current_time;
+  FormResultWallpapier.TextTime.Text := 'Время начала: '+FormatDateTime('hh:nn:ss', current_time)+'. Время завершения: '+FormatDateTime('hh:nn:ss', new_time)+'. Продолжительность: '+FormatDateTime('hh:nn:', difference_time)+'17.';
+
+  // количество вопросов, заданий, правильных ответов, оценка
+  if (length(FormTestStart.EditAllBall.Text) <> 0) then
+  begin
+    edit_all_ball := StrToInt(FormTestStart.EditAllBall.Text);
+  end
+  else
+  begin
+    edit_all_ball := 30;
+  end;
+
+  if (length(FormTestStart.EditMyBall.Text) <> 0) then
+  begin
+    edit_my_ball := StrToInt(FormTestStart.EditMyBall.Text);
+  end
+  else
+  begin
+    edit_my_ball := 30;
+  end;
+
+  if (length(FormTestStart.EditSuccessBall.Text) <> 0) then
+  begin
+    edit_success_ball := StrToInt(FormTestStart.EditSuccessBall.Text);
+  end
+  else
+  begin
+    edit_success_ball := 30;
+  end;
+
+  if (length(FormTestStart.EditSuccessBallBall.Text) <> 0) then
+  begin
+    edit_success_ball_ball := StrToInt(FormTestStart.EditSuccessBallBall.Text);
+  end
+  else
+  begin
+    edit_success_ball_ball := 5;
+  end;
+
+  edit_progress := round((edit_success_ball / edit_all_ball) * 100);
+
+  FormResultWallpapier.TextPoint.Text := 'Всего заданий в тесте: '+IntToStr(edit_all_ball)+'. Задано заданий: '+IntToStr(edit_my_ball)+'. Выполнено: '+IntToStr(edit_my_ball)+'. Правильно: '+IntToStr(edit_success_ball)+'. ';
+  FormResultWallpapier.TextTaskList.Text := 'Набрано '+IntToStr(edit_success_ball)+' баллов из '+IntToStr(edit_all_ball)+' возможных. Ваш результат: '+FloatToStr(edit_progress)+',0%.';
+  FormResultWallpapier.TextResultBall.Text := 'Оценка: '+IntToStr(edit_success_ball_ball)+'.';
+
+  FormResultWallpapier.MemoBottomAllBalls.Lines := IntToStr(edit_all_ball);
+
+  FormResult.LabelBallAll.Caption := IntToStr(edit_all_ball);
+  FormResult.LabelBallMy.Caption := IntToStr(edit_my_ball);
+  FormResult.LabelBallSuccess.Caption := IntToStr(edit_success_ball);
+  FormResult.LabelEfficiency.Caption := FloatToStr(edit_progress)+'%';
+  FormResult.LabelResultText.Caption := 'Набрано баллов: '+IntToStr(edit_success_ball)+' из '+IntToStr(edit_all_ball)+' возможных.'+#13+'Ваш результат: '+FloatToStr(edit_progress)+'%.';
+  FormResult.StaticTextBall.Caption := 'Ваша оценка: '+IntToStr(edit_success_ball_ball);
+
 end;
 
 procedure TFormTestStart.EditAllBallEditingDone(Sender: TObject);
