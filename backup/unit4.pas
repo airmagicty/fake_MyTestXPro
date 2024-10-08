@@ -67,7 +67,7 @@ var
   edit_progress: Real;
 begin
   // убиваем процесс теста
-  //TaskKill();
+  TaskKill();
 
    // открываем новые окна и скрываем старое
   FormResultWallpapier.Show;
@@ -163,6 +163,12 @@ begin
   FormResult.LabelEfficiency.Caption := FloatToStr(edit_progress)+'%';
   FormResult.LabelResultText.Caption := 'Набрано баллов: '+IntToStr(edit_success_ball)+' из '+IntToStr(edit_all_ball)+' возможных.'+#13+'Ваш результат: '+FloatToStr(edit_progress)+'%.';
   FormResult.StaticTextBall.Caption := 'Ваша оценка: '+IntToStr(edit_success_ball_ball);
+
+  //если 5 то зеленый фон
+  if (edit_success_ball_ball = 5) then
+  begin
+    FormResult.Image5Ball.Visible := true;
+  end;
 
 end;
 

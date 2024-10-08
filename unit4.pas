@@ -164,6 +164,12 @@ begin
   FormResult.LabelResultText.Caption := 'Набрано баллов: '+IntToStr(edit_success_ball)+' из '+IntToStr(edit_all_ball)+' возможных.'+#13+'Ваш результат: '+FloatToStr(edit_progress)+'%.';
   FormResult.StaticTextBall.Caption := 'Ваша оценка: '+IntToStr(edit_success_ball_ball);
 
+  //если 5 то зеленый фон
+  if (edit_success_ball_ball = 5) then
+  begin
+    FormResult.Image5Ball.Visible := true;
+  end;
+
 end;
 
 procedure TFormTestStart.EditAllBallEditingDone(Sender: TObject);
@@ -177,7 +183,7 @@ end;
 procedure TFormTestStart.BitBtnInfoClick(Sender: TObject);
 begin
   ShowMessage('FSTest - Генератор результата тестирования MyTestXPro'+#13+
-              'Версия: 1.0 release'+#13+
+              'Версия: 1.1 release'+#13+
               'Разработчик: airmagicty'+#13+
               '© 2024г'+#13+
               #13+

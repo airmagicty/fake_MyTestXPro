@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Buttons, Unit1;
+  Buttons, TAGraph, Unit1;
 
 type
 
@@ -16,6 +16,7 @@ type
     BitBtnOk: TBitBtn;
     Image1: TImage;
     Image2: TImage;
+    Image5Ball: TImage;
     Label1: TLabel;
     LabelResultText: TLabel;
     Label2: TLabel;

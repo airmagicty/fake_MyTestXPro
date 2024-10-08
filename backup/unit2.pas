@@ -16,6 +16,7 @@ type
     BitBtnOk: TBitBtn;
     Image1: TImage;
     Image2: TImage;
+    Image5Ball: TImage;
     Label1: TLabel;
     LabelResultText: TLabel;
     Label2: TLabel;
