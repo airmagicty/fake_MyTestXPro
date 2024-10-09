@@ -17,7 +17,6 @@ type
     BitBtnInfo: TBitBtn;
     ButtonStart: TButton;
     CheckBoxTestName: TCheckBox;
-    CheckComboBoxProcent: TCheckComboBox;
     EditSuccessBallBall: TEdit;
     EditTestTime: TEdit;
     EditTestName: TEdit;
@@ -166,12 +165,67 @@ begin
   FormResult.LabelResultText.Caption := 'Набрано баллов: '+IntToStr(edit_success_ball)+' из '+IntToStr(edit_all_ball)+' возможных.'+#13+'Ваш результат: '+FloatToStr(edit_progress)+'%.';
   FormResult.StaticTextBall.Caption := 'Ваша оценка: '+IntToStr(edit_success_ball_ball);
 
-  //если 5 то зеленый фон
+  // загрузка ресурсов в зависимости от прогресса по баллам
+  if (edit_progress = 100) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_100');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_100');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_100');
+  end
+  else if (edit_progress >= 95) and (edit_progress < 100) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_95');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_95');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_95');
+  end
+  else if (edit_progress >= 90) and (edit_progress < 95) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_90');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_90');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_90');
+  end
+  else if (edit_progress >= 80) and (edit_progress < 90) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_80');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_80');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_80');
+  end
+  else if (edit_progress >= 70) and (edit_progress < 80) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_70');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_70');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_70');
+  end
+  else if (edit_progress >= 60) and (edit_progress < 70) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_60');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_60');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_60');
+  end
+  else if (edit_progress > 0) and (edit_progress < 60) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_50');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_50');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_50');
+  end
+  else if (edit_progress = 0) then
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_0');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_0');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_0');
+  end
+  else
+  begin
+    FormResultWallpapier.ImageQR.Picture.PNG.LoadFromResourceName(HINSTANCE, 'QR_90');
+    FormResult.ImageCircle1.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_90');
+    FormResult.ImageCircle2.Picture.PNG.LoadFromResourceName(HINSTANCE, 'C_90');
+  end;
+
+  // если 5 то зеленый фон
   if (edit_success_ball_ball = 5) then
   begin
     FormResult.Image5Ball.Visible := true;
   end;
-
 end;
 
 procedure TFormTestStart.EditAllBallEditingDone(Sender: TObject);

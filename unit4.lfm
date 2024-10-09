@@ -1,18 +1,18 @@
 object FormTestStart: TFormTestStart
-  Left = 430
+  Left = 420
   Height = 104
-  Top = 727
-  Width = 241
+  Top = 684
+  Width = 239
   Caption = 'FS_Test'
   ClientHeight = 104
-  ClientWidth = 241
+  ClientWidth = 239
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
   object ButtonStart: TButton
     Left = 32
     Height = 32
     Top = 72
-    Width = 88
+    Width = 207
     Caption = 'Создать'
     TabOrder = 0
     OnClick = ButtonStartClick
@@ -130,23 +130,5 @@ object FormTestStart: TFormTestStart
     TabOrder = 9
     Text = '5'
     TextHint = 'верно'
-  end
-  object CheckComboBoxProcent: TCheckComboBox
-    Left = 120
-    Height = 26
-    Top = 76
-    Width = 120
-    Color = clWhite
-    ItemHeight = 20
-    Items.Strings = (
-      '100%'
-      '90%'
-      '80%'
-      '70%'
-      '60%'
-      '50%'
-      '0%'
-    )
-    TabOrder = 10
   end
 end

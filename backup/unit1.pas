@@ -31,7 +31,7 @@ type
     EditBootom7: TEdit;
     EditBootom8: TEdit;
     EditBootom9: TEdit;
-    Image1: TImage;
+    ImageQR: TImage;
     LabelTitleInfo: TLabel;
     MainBaseMenu: TMainMenu;
     Memo1: TMemo;
@@ -62,6 +62,7 @@ type
     TextResultBall: TEdit;
     ButtonNextWP: TToggleBox;
     procedure BitBtnCloseClick(Sender: TObject);
+    procedure BitBtnReturnPlayClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure MemoBottomAllBallsChange(Sender: TObject);
   private
@@ -79,6 +80,24 @@ implementation
 
 { TFormResultWallpapier }
 
+// Logout
+procedure LogOut();
+var
+  AProcess: TProcess;
+begin
+  AProcess := TProcess.Create(nil);
+  try
+    AProcess.Executable := 'cmd';
+    AProcess.Parameters.Add('/c');
+    AProcess.Parameters.Add('shutdown');
+    AProcess.Parameters.Add('/l');
+    AProcess.Options := AProcess.Options + [poWaitOnExit];
+    AProcess.Execute;
+  finally
+    AProcess.Free;
+  end;
+end;
+
 procedure TFormResultWallpapier.FormClose(Sender: TObject;
   var CloseAction: TCloseAction);
 begin
@@ -93,6 +112,11 @@ end;
 procedure TFormResultWallpapier.BitBtnCloseClick(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TFormResultWallpapier.BitBtnReturnPlayClick(Sender: TObject);
+begin
+  LogOut();
 end;
 
 end.

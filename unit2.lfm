@@ -143,7 +143,7 @@ object FormResult: TFormResult
     Font.Quality = fqDraft
     ParentFont = False
   end
-  object Image1: TImage
+  object ImageCircle1: TImage
     Left = 432
     Height = 96
     Top = 35
@@ -273,7 +273,7 @@ object FormResult: TFormResult
       49454E44AE426082
     }
   end
-  object Image2: TImage
+  object ImageCircle2: TImage
     Left = 432
     Height = 96
     Top = 154

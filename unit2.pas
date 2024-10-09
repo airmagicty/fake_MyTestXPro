@@ -14,8 +14,8 @@ type
 
   TFormResult = class(TForm)
     BitBtnOk: TBitBtn;
-    Image1: TImage;
-    Image2: TImage;
+    ImageCircle1: TImage;
+    ImageCircle2: TImage;
     Image5Ball: TImage;
     Label1: TLabel;
     LabelResultText: TLabel;
