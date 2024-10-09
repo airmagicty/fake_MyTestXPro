@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Process, LazUTF8, Unit2, Unit1, DateUtils;
+  Buttons, Menus, ActnList, ColorBox, CheckLst, ValEdit, ComboEx, Process,
+  LazUTF8, Unit2, Unit1, DateUtils;
 
 type
 
@@ -16,6 +17,7 @@ type
     BitBtnInfo: TBitBtn;
     ButtonStart: TButton;
     CheckBoxTestName: TCheckBox;
+    CheckComboBoxProcent: TCheckComboBox;
     EditSuccessBallBall: TEdit;
     EditTestTime: TEdit;
     EditTestName: TEdit;

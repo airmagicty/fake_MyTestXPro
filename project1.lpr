@@ -17,7 +17,7 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
-  Application.Scaled:=False;
+  Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TFormTestStart, FormTestStart);
   Application.CreateForm(TFormResultWallpapier, FormResultWallpapier);

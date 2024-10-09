@@ -13,6 +13,24 @@
         <DpiAware Value="True"/>
       </XPManifest>
       <Icon Value="0"/>
+      <Resources Count="16">
+        <Resource_0 FileName="qr_progress\C_0.png" Type="RCDATA" ResourceName="C_0"/>
+        <Resource_1 FileName="qr_progress\C_50.png" Type="RCDATA" ResourceName="C_50"/>
+        <Resource_2 FileName="qr_progress\C_60.png" Type="RCDATA" ResourceName="C_60"/>
+        <Resource_3 FileName="qr_progress\C_70.png" Type="RCDATA" ResourceName="C_70"/>
+        <Resource_4 FileName="qr_progress\C_80.png" Type="RCDATA" ResourceName="C_80"/>
+        <Resource_5 FileName="qr_progress\C_90.png" Type="RCDATA" ResourceName="C_90"/>
+        <Resource_6 FileName="qr_progress\C_95.png" Type="RCDATA" ResourceName="C_95"/>
+        <Resource_7 FileName="qr_progress\C_100.png" Type="RCDATA" ResourceName="C_100"/>
+        <Resource_8 FileName="qr_progress\QR_0.png" Type="RCDATA" ResourceName="QR_0"/>
+        <Resource_9 FileName="qr_progress\QR_50.png" Type="RCDATA" ResourceName="QR_50"/>
+        <Resource_10 FileName="qr_progress\QR_60.png" Type="RCDATA" ResourceName="QR_60"/>
+        <Resource_11 FileName="qr_progress\QR_70.png" Type="RCDATA" ResourceName="QR_70"/>
+        <Resource_12 FileName="qr_progress\QR_80.png" Type="RCDATA" ResourceName="QR_80"/>
+        <Resource_13 FileName="qr_progress\QR_90.png" Type="RCDATA" ResourceName="QR_90"/>
+        <Resource_14 FileName="qr_progress\QR_95.png" Type="RCDATA" ResourceName="QR_95"/>
+        <Resource_15 FileName="qr_progress\QR_100.png" Type="RCDATA" ResourceName="QR_100"/>
+      </Resources>
     </General>
     <BuildModes>
       <Item Name="Default" Default="True"/>

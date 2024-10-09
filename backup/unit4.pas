@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Process, LazUTF8, Unit2, Unit1, DateUtils;
+  Buttons, Menus, ActnList, ColorBox, CheckLst, ValEdit, ComboEx, Process,
+  LazUTF8, Unit2, Unit1, DateUtils;
 
 type
 
@@ -16,6 +17,7 @@ type
     BitBtnInfo: TBitBtn;
     ButtonStart: TButton;
     CheckBoxTestName: TCheckBox;
+    CheckComboBoxProcent: TCheckComboBox;
     EditSuccessBallBall: TEdit;
     EditTestTime: TEdit;
     EditTestName: TEdit;
@@ -183,7 +185,7 @@ end;
 procedure TFormTestStart.BitBtnInfoClick(Sender: TObject);
 begin
   ShowMessage('FSTest - Генератор результата тестирования MyTestXPro'+#13+
-              'Версия: 1.0 release'+#13+
+              'Версия: 1.1 release'+#13+
               'Разработчик: airmagicty'+#13+
               '© 2024г'+#13+
               #13+
