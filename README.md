@@ -1,5 +1,6 @@
 # fake_MyTestXPro
-Lazarus (FreePascal) v2.2.4 Attention! 
+Lazarus (FreePascal) v3.4 Attention! 
 project1.lpi запуск
 
+Version 1.3:
 _При убийстве задачи теста сам тест нельзя перепройти повторно, защита теста. Для ее обхода нажмите на кнопку Перепройти, она сделает logout, после чего етст вновь станет доступен_
