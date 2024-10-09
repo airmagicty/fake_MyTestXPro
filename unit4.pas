@@ -239,7 +239,7 @@ end;
 procedure TFormTestStart.BitBtnInfoClick(Sender: TObject);
 begin
   ShowMessage('FSTest - Генератор результата тестирования MyTestXPro'+#13+
-              'Версия: 1.2 release'+#13+
+              'Версия: 1.3 release'+#13+
               'Разработчик: airmagicty'+#13+
               '© 2024г'+#13+
               #13+
