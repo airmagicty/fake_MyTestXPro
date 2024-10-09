@@ -64,7 +64,6 @@ type
     procedure BitBtnCloseClick(Sender: TObject);
     procedure BitBtnReturnPlayClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
-    procedure MemoBottomAllBallsChange(Sender: TObject);
   private
 
   public
@@ -102,11 +101,6 @@ procedure TFormResultWallpapier.FormClose(Sender: TObject;
   var CloseAction: TCloseAction);
 begin
   Application.Terminate;
-end;
-
-procedure TFormResultWallpapier.MemoBottomAllBallsChange(Sender: TObject);
-begin
-
 end;
 
 procedure TFormResultWallpapier.BitBtnCloseClick(Sender: TObject);

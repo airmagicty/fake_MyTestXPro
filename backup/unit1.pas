@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
   ExtCtrls, Buttons, ActnList, CheckLst, ComCtrls, ComboEx, ValEdit, MaskEdit,
-  SynEdit;
+  SynEdit, Process;
 
 type
 

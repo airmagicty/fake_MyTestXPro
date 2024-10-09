@@ -337,7 +337,6 @@ object FormResultWallpapier: TFormResultWallpapier
     Font.Quality = fqDraft
     ParentFont = False
     TabOrder = 19
-    OnChange = MemoBottomAllBallsChange
   end
   object Memo4: TMemo
     Left = 578
